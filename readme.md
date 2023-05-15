@@ -44,18 +44,18 @@ Workintech programını tamamladığında şirketler yaptığın bu projeye de b
 
 #### PROJE DEĞERLENDİRME KRİTERLERİ:
 
-- [ x] Proje dosyaları ve klasörleri doğru ve anlamlı olarak yapılandırılmış mı?
-- [x ] .gitignore dosyası var mı?
-- [x ] Dependency'ler doğru yapılandırılmış mı? (dependency, devDependency)
-- [x ] Ayarlar farklı ortamlar için doğru yapılandırılmış mı ve doğru yerden okuyor mu?
-- [x ] Router kullanılmış mı?
-- [x ] Model fonksiyonları kullanılmış mı?
+- [x] Proje dosyaları ve klasörleri doğru ve anlamlı olarak yapılandırılmış mı?
+- [x] .gitignore dosyası var mı?
+- [x] Dependency'ler doğru yapılandırılmış mı? (dependency, devDependency)
+- [x] Ayarlar farklı ortamlar için doğru yapılandırılmış mı ve doğru yerden okuyor mu?
+- [x] Router kullanılmış mı?
+- [x] Model fonksiyonları kullanılmış mı?
 - [ ] response status kodları doğru mu, mesajları anlaşılır mı?
 - [ ] reponse'da veri doğru şekilde dönüyor mu, gereksiz tekrar eden bilgiler var mı?
-- [ ] Error Midlleware eklenmiş mi?
-- [ ] En az 2 tane middleware fonskiyonu eklenmiş mi?
-- [ ] JWToken doğru kullanılmış mı?
-- [/] Migration, Seed dosyaları doğru oluşturulmuş mu?
-- [ ] Secret ve environment ayarları farklı ortamlar için ayrı olacak şekilde ayarlanmış mı?
+- [x] Error Midlleware eklenmiş mi?
+- [x] En az 2 tane middleware fonskiyonu eklenmiş mi?
+- [x] JWToken doğru kullanılmış mı?
+- [x] Migration, Seed dosyaları doğru oluşturulmuş mu?
+- [x] Secret ve environment ayarları farklı ortamlar için ayrı olacak şekilde ayarlanmış mı?
 - [ ] Postman'da collection oluşturulmuş ve export edilmiş mi?
 - [ ] Unit ve entegrasyonları testleri yeterli miktarda yazılmış mı?

@@ -8,35 +8,31 @@ exports.seed = async function (knex) {
   await knex("users").insert([
     {
       id: 1,
+      role: "admin",
       username: "pasaismihan",
-      password: "2323",
+      password: "$2a$08$7ggLKQyAX7FVCWrUghwBV.bAZHlHOY8Gsfa7G3ngVeizs0YjdJih6",
       email: "pasa@twitter.com",
-      bio_text: "lorem ipsum dolor...",
-      location: "ANTALYA",
     },
     {
       id: 2,
+      role: "user",
       username: "taneraytas",
       password: "4245",
       email: "taner@twitter.com",
-      bio_text: "lorem ipsum dolor...",
-      location: "IZMIR",
     },
     {
       id: 3,
+      role: "user",
       username: "hamdiboyraz",
       password: "5674",
       email: "hamdi@twitter.com",
-      bio_text: "lorem ipsum dolor...",
-      location: "ISTANBUL",
     },
     {
       id: 4,
+      role: "user",
       username: "aslidivarci",
       password: "1253",
       email: "asli@twitter.com",
-      bio_text: "lorem ipsum dolor...",
-      location: "FETHIYE",
     },
   ]);
   await knex("posts").insert([
