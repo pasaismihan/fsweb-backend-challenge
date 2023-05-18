@@ -3,7 +3,7 @@ const userModel = require("../Users/users.model");
 const bcrypt = require("bcryptjs");
 const mw = require("./auth-middleware");
 
-router.post("/register", mw.payloadCheck, async (req, res, next) => {
+router.post("/register", async (req, res, next) => {
   try {
     const { username, password, email, role } = req.body;
     const hashedPassword = bcrypt.hashSync(password, 8);
@@ -29,6 +29,7 @@ router.post(
     try {
       return res.json({
         message: `welcome back ${req.user.username}`,
+        token: req.user.token,
       });
     } catch (error) {
       next(error);

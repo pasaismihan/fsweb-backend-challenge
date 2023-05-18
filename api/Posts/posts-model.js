@@ -1,7 +1,15 @@
 const db = require("../../data/db-config");
 
 function getAllPosts() {
-  return db("posts as p").leftJoin("users as u", "p.user_id", "u.id");
+  return db("posts as p")
+    .leftJoin("users as u", "p.user_id", "u.id")
+    .select(
+      "u.username",
+      "p.id",
+      "p.message",
+      "p.created_at",
+      "p.retweet_count"
+    );
 }
 
 async function getPostById(id) {
@@ -18,14 +26,9 @@ async function getPostsByFilter(filter) {
   return post;
 }
 
-async function updatePost(post, id) {
-  await db("postsas p").where("p.id", id).first().update(post);
-  return await getPostById(id);
-}
-
 async function createPost(post) {
-  const [id] = await db("posts as p").insert(post);
-  const newPost = await getPostsByFilter({ "p.id": id });
+  const [post_id] = await db("posts as p").insert(post);
+  const newPost = await getPostsByFilter({ id: post_id });
   return newPost;
 }
 
@@ -37,7 +40,6 @@ module.exports = {
   getAllPosts,
   getPostById,
   getPostsByFilter,
-  updatePost,
   createPost,
   deletePost,
 };

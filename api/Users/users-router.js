@@ -18,14 +18,5 @@ router.get("/:id", async (req, res, next) => {
     next();
   }
 });
-router.post("/:id", (req, res, next) => {
-  //
-});
-router.put("/:id", (req, res, next) => {
-  //
-});
-router.delete("/:id", (req, res, next) => {
-  //
-});
 
 module.exports = router;

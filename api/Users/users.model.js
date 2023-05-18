@@ -10,13 +10,13 @@ function getUserById(id) {
     .where("u.id", id)
     .first();
 }
-function getUserByFilter(filter) {
-  const filteredUser = db("users").where(filter);
+async function getUserByFilter(filter) {
+  const filteredUser = await db("users").where(filter);
   return filteredUser;
 }
 async function createUser(user) {
   const [id] = await db("users as u").insert(user);
-  const newUser = await getUserByFilter({ "u.id": id });
+  const newUser = await getUserByFilter({ id: id });
   return newUser;
 }
 function updateUser(user, id) {

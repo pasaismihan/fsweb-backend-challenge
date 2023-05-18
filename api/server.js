@@ -20,10 +20,10 @@ server.get("/", (req, res) => {
   res.json({ message: "Twitter backend project" });
 });
 
-server.use((err, req, res, next) => {
-  res.status(err.status || 500).json({
-    message: err.message || "server error",
-  });
-});
+// server.use((err, req, res, next) => {
+//   res.status(err.status || 500).json({
+//     message: err.message || "server error",
+//   });
+// });
 
 module.exports = server;
